@@ -1,6 +1,28 @@
 {
-  "version": "1.2.0",
+  "version": "v1.2.0",
   "patches": [
+    {
+      "name": "Custom API Endpoint",
+      "description": "Allows you to point the app to a custom backend server by modifying environment variables.",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "fr.t2c.t2c": [
+          "3.2.0"
+        ]
+      },
+      "options": [
+        {
+          "key": "api_url",
+          "title": "API URL",
+          "description": "Enter the base URL for the API (e.g., https://my-proxy.t2c.fr)",
+          "required": false,
+          "type": "kotlin.String",
+          "default": "https://api.t2c.fr",
+          "values": null
+        }
+      ]
+    },
     {
       "name": "Force Developer Environment (Staging)",
       "description": "Replaces the production environment variables with the developer/staging ones.",
