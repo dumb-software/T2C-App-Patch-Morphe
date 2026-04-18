@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.0.1...v1.0.2) (2026-04-18)
+
+
+### Bug Fixes
+
+* semantic-release bot ([4de5e08](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/4de5e083b60309be5c96258e6c67c073caa2e95e))
+
 ## [1.0.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.0.0...v1.0.1) (2026-04-18)
 
 
