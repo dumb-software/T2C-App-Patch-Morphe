@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.2...v1.1.3) (2026-04-18)
+
+
+### Bug Fixes
+
+* Prefix patch version and update Gradle settings ([e96fdd4](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/e96fdd453d037b6cf50ca044d2585b2dfad65716))
+
 ## [1.1.2](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.1...v1.1.2) (2026-04-18)
 
 ## [1.1.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.0...v1.1.1) (2026-04-18)
