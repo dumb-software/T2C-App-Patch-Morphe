@@ -16,9 +16,9 @@ To use these patches, you can add them to Morphe Manager.
 
 #### How to use these patches
 
-Click here to add these patches to Morphe: https://morphe.software/add-source?github=dumb-software/T2C-API-Documentation
+Click here to add these patches to Morphe: [https://morphe.software/add-source?github=dumb-software/T2C-App-Patch-Morphe](https://morphe.software/add-source?github=dumb-software/T2C-App-Patch-Morphe)
 
-Or manually add this repository url as a patch source in Morphe: https://github.com/dumb-software/T2C-API-Documentation
+Or manually add this repository url as a patch source in Morphe: [https://github.com/dumb-software/T2C-App-Patch-Morphe](https://github.com/dumb-software/T2C-App-Patch-Morphe)
 
 ## 🧑‍💻 Usage
 
