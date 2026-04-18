@@ -62,7 +62,8 @@
             "path": "patches/build/libs/patches-*.mpp"
           }
         ],
-        "successComment": false
+        "successComment": false,
+        "failComment": false
       }
     ],
 
