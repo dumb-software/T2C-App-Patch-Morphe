@@ -20,15 +20,16 @@ val removeUmamiPatch = rawResourcePatch(
     compatibleWith(COMPATIBILITY_T2C)
 
     execute {
-        val envFile = get("assets/flutter_assets/.env.prod") ?: return@execute
-
-        val content = envFile.readText()
-
-        val patched = content
-            .replace(Regex("UMAMI_ENDPOINT=.*"), "UMAMI_ENDPOINT=http://127.0.0.1")
-            .replace(Regex("UMAMI_WEBSITE=.*"), "UMAMI_WEBSITE=")
-            .replace(Regex("UMAMI_HOSTNAME=.*"), "UMAMI_HOSTNAME=127.0.0.1")
-
-        envFile.writeText(patched)
+        listOf(".env.prod", ".env.dev").forEach { fileName ->
+            val envFile = get("assets/flutter_assets/$fileName") ?: return@forEach
+            
+            val content = envFile.readText()
+            val patched = content
+                .replace(Regex("UMAMI_ENDPOINT=.*"), "UMAMI_ENDPOINT=http://127.0.0.1")
+                .replace(Regex("UMAMI_WEBSITE=.*"), "UMAMI_WEBSITE=")
+                .replace(Regex("UMAMI_HOSTNAME=.*"), "UMAMI_HOSTNAME=127.0.0.1")
+                
+            envFile.writeText(patched)
+        }
     }
 }

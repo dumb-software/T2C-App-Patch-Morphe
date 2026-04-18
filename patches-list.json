@@ -1,6 +1,42 @@
 {
-  "version": "1.1.3",
+  "version": "v1.1.3",
   "patches": [
+    {
+      "name": "Force Developer Environment (Staging)",
+      "description": "Replaces the production environment variables with the developer/staging ones.",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "fr.t2c.t2c": [
+          "3.2.0"
+        ]
+      },
+      "options": []
+    },
+    {
+      "name": "Remove Firebase Tracking",
+      "description": "Removes Firebase App ID and Crashlytics API keys to disable Google tracking.",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "fr.t2c.t2c": [
+          "3.2.0"
+        ]
+      },
+      "options": []
+    },
+    {
+      "name": "Remove Google Maps API Key",
+      "description": "Removes the Google Maps API Key from the manifest (Breaks the interactive map but stops Google tracking).",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "fr.t2c.t2c": [
+          "3.2.0"
+        ]
+      },
+      "options": []
+    },
     {
       "name": "Remove Umami tracking",
       "description": "Disables Umami tracking safely by modifying existing values.",
