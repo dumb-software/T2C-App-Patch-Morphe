@@ -1,4 +1,4 @@
-rootProject.name = "morphe-patches"
+rootProject.name = "t2c-app-patches"
 
 pluginManagement {
     repositories {
