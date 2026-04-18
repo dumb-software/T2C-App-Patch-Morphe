@@ -3,20 +3,27 @@
     "main",
     {
       "name": "dev",
-      "prerelease": true
+      "prerelease": "alpha"
     }
   ],
   "plugins": [
     [
-      "@semantic-release/commit-analyzer", {
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
         "releaseRules": [
-          { "type": "build", "scope": "Needs bump", "release": "patch" }
+          { "type": "build", "release": "patch" },
+          { "type": "chore", "release": "patch" },
+          { "type": "fix", "release": "patch" },
+          { "type": "feat", "release": "minor" }
         ]
       }
     ],
     "@semantic-release/release-notes-generator",
+
     [
-      "@MorpheApp/changelog", {
+      "@MorpheApp/changelog",
+      {
         "releaseJson": {
           "path": "patches-bundle.json",
           "downloadUrlTemplate": "https://github.com/${owner}/${repo}/releases/download/v${version}/patches-${version}.mpp",
@@ -24,13 +31,16 @@
         }
       }
     ],
+
     "gradle-semantic-release-plugin",
+
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "jq '.version=\"${nextRelease.version}\"' patches-list.json > patches-list.json.tmp && mv patches-list.json.tmp patches-list.json"
+        "prepareCmd": "jq --arg v \"${nextRelease.version}\" '.version=$v' patches-list.json > patches-list.tmp.json && mv patches-list.tmp.json patches-list.json"
       }
     ],
+
     [
       "@semantic-release/git",
       {
@@ -40,24 +50,28 @@
           "patches-bundle.json",
           "patches-list.json"
         ],
-        "message": "chore: Release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        "message": "chore(release): v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
+
     [
       "@semantic-release/github",
       {
         "assets": [
           {
-            "path": "patches/build/libs/patches-!(*sources*|*javadoc*).mpp?(.asc)"
+            "path": "patches/build/libs/patches-*.mpp"
           }
         ],
         "successComment": false
       }
     ],
+
     [
       "@saithodev/semantic-release-backmerge",
       {
-        "backmergeBranches": [{"from": "main", "to": "dev"}],
+        "backmergeBranches": [
+          { "from": "main", "to": "dev" }
+        ],
         "clearWorkspace": true
       }
     ]
