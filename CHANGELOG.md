@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.3...v1.2.0) (2026-04-18)
+
+
+### Features
+
+* Add remove gmaps apikey, force dev environment, and disable g firebase. Update umami patch ([48d8d66](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/48d8d662b6bd3294a98f9ed6d1d51eeb8a324ac2))
+
 ## [1.1.3](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.2...v1.1.3) (2026-04-18)
 
 
