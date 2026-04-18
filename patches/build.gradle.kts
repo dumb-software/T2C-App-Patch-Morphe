@@ -1,14 +1,14 @@
-group = "app.template"
+group = "com.github.dumb_software"
 
 patches {
     about {
-        name = "UserXYZ Patches"
-        description = "Patches for apps I like"
-        source = "git@github.com:UserXYZ/morphe-patches.git"
-        author = "Awesome dev"
-        contact = "na"
-        website = "na"
-        license = "GPLv3"
+        name = "T2C App Patches"
+        description = "Patches for T2C App"
+        source = "git@github.com:dumb-software/T2C-API-Documentation.git"
+        author = "dumb-software"
+        contact = "https://github.com/dumb-software/T2C-API-Documentation/issues"
+        website = "https://dumb-software.github.io/T2C-API-Documentation/"
+        license = "MIT License"
     }
 }
 
