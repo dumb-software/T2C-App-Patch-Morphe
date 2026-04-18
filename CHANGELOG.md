@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.0.2...v1.1.0) (2026-04-18)
+
+
+### Features
+
+* add license file ([1b4c526](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/1b4c5265f760b44cb2a82fa56b57dfa2cffb2cd1))
+
 ## [1.0.2](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.0.1...v1.0.2) (2026-04-18)
 
 
