@@ -1,4 +1,17 @@
 {
-  "version": "",
-  "patches": []
+  "version": "1.0.0",
+  "patches": [
+    {
+      "name": "Remove Umami tracking",
+      "description": "Disables Umami tracking safely by modifying existing values.",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "fr.t2c.t2c": [
+          "3.2.0"
+        ]
+      },
+      "options": []
+    }
+  ]
 }
