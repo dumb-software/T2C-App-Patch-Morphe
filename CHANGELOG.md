@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.0...v1.1.1) (2026-04-18)
+
+
+### Bug Fixes
+
+* dumb-software ([aff9dc2](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/aff9dc256e0cc2566ac3ece392509c44bd7b39cb))
+
 # [1.1.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.0.2...v1.1.0) (2026-04-18)
 
 

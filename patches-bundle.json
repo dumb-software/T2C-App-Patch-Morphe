@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-04-18T13:30:36",
-  "description": "# [1.1.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.0.2...v1.1.0) (2026-04-18)\n\n\n### Features\n\n* add license file ([1b4c526](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/1b4c5265f760b44cb2a82fa56b57dfa2cffb2cd1))",
-  "download_url": "https://github.com/dumb-software/T2C-App-Patch-Morphe/releases/download/v1.1.0/patches-1.1.0.mpp",
-  "signature_download_url": "https://github.com/dumb-software/T2C-App-Patch-Morphe/releases/download/v1.1.0/patches-1.1.0.mpp.asc",
-  "version": "1.1.0"
+  "created_at": "2026-04-18T14:00:55",
+  "description": "## [1.1.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.0...v1.1.1) (2026-04-18)\n\n\n### Bug Fixes\n\n* dumb-software ([aff9dc2](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/aff9dc256e0cc2566ac3ece392509c44bd7b39cb))",
+  "download_url": "https://github.com/dumb-software/T2C-App-Patch-Morphe/releases/download/v1.1.1/patches-1.1.1.mpp",
+  "signature_download_url": "https://github.com/dumb-software/T2C-App-Patch-Morphe/releases/download/v1.1.1/patches-1.1.1.mpp.asc",
+  "version": "1.1.1"
 }
