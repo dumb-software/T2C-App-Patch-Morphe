@@ -1,9 +1,9 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "patches": [
     {
-      "name": "Custom API Endpoint",
-      "description": "Allows you to point the app to a custom backend server by modifying environment variables.",
+      "name": "Change API endpoint",
+      "description": "Points the app to a custom backend server by modifying environment variables.",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {
@@ -24,8 +24,8 @@
       ]
     },
     {
-      "name": "Force Developer Environment (Staging)",
-      "description": "Replaces the production environment variables with the developer/staging ones.",
+      "name": "Force developer environment",
+      "description": "Replaces the production environment variables with the developer and staging ones.",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {
@@ -36,7 +36,7 @@
       "options": []
     },
     {
-      "name": "Remove Firebase Tracking",
+      "name": "Remove Firebase tracking",
       "description": "Removes Firebase App ID and Crashlytics API keys to disable Google tracking.",
       "use": true,
       "dependencies": [],
@@ -48,8 +48,8 @@
       "options": []
     },
     {
-      "name": "Remove Google Maps API Key",
-      "description": "Removes the Google Maps API Key from the manifest (Breaks the interactive map but stops Google tracking).",
+      "name": "Remove Google Maps API key",
+      "description": "Removes the Google Maps API key from the manifest to stop Google tracking.",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {
@@ -61,7 +61,7 @@
     },
     {
       "name": "Remove Umami tracking",
-      "description": "Disables Umami tracking safely by modifying existing values.",
+      "description": "Disables Umami tracking safely by modifying existing environment values.",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {
