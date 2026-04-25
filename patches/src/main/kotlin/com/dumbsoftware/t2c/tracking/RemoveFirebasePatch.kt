@@ -1,26 +1,25 @@
 package com.dumbsoftware.t2c.tracking
 
 import app.morphe.patcher.patch.resourcePatch
-import app.morphe.patcher.patch.Compatibility
-import app.morphe.patcher.patch.AppTarget
+import com.dumbsoftware.t2c.COMPATIBILITY_T2C
 
 @Suppress("unused")
 val removeFirebasePatch = resourcePatch(
-    name = "Remove Firebase Tracking",
+    name = "Remove Firebase tracking",
     description = "Removes Firebase App ID and Crashlytics API keys to disable Google tracking."
 ) {
     compatibleWith(COMPATIBILITY_T2C)
 
     execute {
-        val stringsFile = get("res/values/strings.xml") ?: return@execute
-
-        val content = stringsFile.readText()
-
-        val patched = content.replace(
-            Regex("<string name=\"(google_app_id|google_crash_reporting_api_key|google_api_key)\">.*?</string>"),
-            "<string name=\"$1\"></string>"
-        )
-
-        stringsFile.writeText(patched)
+        document("res/values/strings.xml").use { document ->
+            val stringNodes = document.getElementsByTagName("string")
+            for (i in 0 until stringNodes.length) {
+                val node = stringNodes.item(i)
+                val nameAttr = node.attributes.getNamedItem("name")?.nodeValue
+                if (nameAttr == "google_app_id" || nameAttr == "google_crash_reporting_api_key" || nameAttr == "google_api_key") {
+                    node.textContent = ""
+                }
+            }
+        }
     }
 }

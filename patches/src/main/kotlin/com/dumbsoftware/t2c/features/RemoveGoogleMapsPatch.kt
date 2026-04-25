@@ -1,12 +1,12 @@
 package com.dumbsoftware.t2c.features
 
 import app.morphe.patcher.patch.resourcePatch
-import com.dumbsoftware.t2c.tracking.COMPATIBILITY_T2C
+import com.dumbsoftware.t2c.COMPATIBILITY_T2C
 
 @Suppress("unused")
 val removeGoogleMapsPatch = resourcePatch(
-    name = "Remove Google Maps API Key",
-    description = "Removes the Google Maps API Key from the manifest (Breaks the interactive map but stops Google tracking)."
+    name = "Remove Google Maps API key",
+    description = "Removes the Google Maps API key from the manifest to stop Google tracking."
 ) {
     compatibleWith(COMPATIBILITY_T2C)
 

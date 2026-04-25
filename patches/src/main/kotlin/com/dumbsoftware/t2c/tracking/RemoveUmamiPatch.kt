@@ -1,21 +1,12 @@
 package com.dumbsoftware.t2c.tracking
 
 import app.morphe.patcher.patch.rawResourcePatch
-import app.morphe.patcher.patch.Compatibility
-import app.morphe.patcher.patch.AppTarget
-
-val COMPATIBILITY_T2C = Compatibility(
-    name = "T2C",
-    packageName = "fr.t2c.t2c",
-    targets = listOf(
-        AppTarget("3.2.0")
-    )
-)
+import com.dumbsoftware.t2c.COMPATIBILITY_T2C
 
 @Suppress("unused")
 val removeUmamiPatch = rawResourcePatch(
     name = "Remove Umami tracking",
-    description = "Disables Umami tracking safely by modifying existing values."
+    description = "Disables Umami tracking safely by modifying existing environment values."
 ) {
     compatibleWith(COMPATIBILITY_T2C)
 

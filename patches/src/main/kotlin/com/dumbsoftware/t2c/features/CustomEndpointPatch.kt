@@ -2,12 +2,12 @@ package com.dumbsoftware.t2c.features
 
 import app.morphe.patcher.patch.rawResourcePatch
 import app.morphe.patcher.patch.stringOption
-import com.dumbsoftware.t2c.tracking.COMPATIBILITY_T2C
+import com.dumbsoftware.t2c.COMPATIBILITY_T2C
 
 @Suppress("unused")
 val customEndpointPatch = rawResourcePatch(
-    name = "Custom API Endpoint",
-    description = "Allows you to point the app to a custom backend server by modifying environment variables."
+    name = "Change API endpoint",
+    description = "Points the app to a custom backend server by modifying environment variables."
 ) {
     compatibleWith(COMPATIBILITY_T2C)
 

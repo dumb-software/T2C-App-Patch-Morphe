@@ -1,12 +1,12 @@
 package com.dumbsoftware.t2c.features
 
 import app.morphe.patcher.patch.rawResourcePatch
-import com.dumbsoftware.t2c.tracking.COMPATIBILITY_T2C
+import com.dumbsoftware.t2c.COMPATIBILITY_T2C
 
 @Suppress("unused")
 val forceDevEnvironmentPatch = rawResourcePatch(
-    name = "Force Developer Environment (Staging)",
-    description = "Replaces the production environment variables with the developer/staging ones."
+    name = "Force developer environment",
+    description = "Replaces the production environment variables with the developer and staging ones."
 ) {
     compatibleWith(COMPATIBILITY_T2C)
 
