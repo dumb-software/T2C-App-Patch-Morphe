@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.2.3...v1.3.0) (2026-04-26)
+
+
+### Features
+
+* **patches:** add ForceLocalEnvironment and CustomUmamiEndpoint patches ([4f05fb0](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/4f05fb009006db4b2afd744773953573737ab8d1))
+
 ## [1.2.3](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.2.2...v1.2.3) (2026-04-26)
 
 
