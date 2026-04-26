@@ -7,7 +7,17 @@
 
 ## [1.2.2](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.2.1...v1.2.2) (2026-04-25)
 
+
+### Build System
+
+* Add COMPATIBILITY_T2C and update patches ([1f8832c](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/1f8832c6cb62a6d9131eba31b2ae2c09e09642b6))
+
 ## [1.2.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.2.0...v1.2.1) (2026-04-18)
+
+
+### Build System
+
+* Add custom api endpoint ([a17a3a8](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/a17a3a821398b7054cd04de4bb50f42c6f7b1056))
 
 # [1.2.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.3...v1.2.0) (2026-04-18)
 
@@ -24,6 +34,12 @@
 * Prefix patch version and update Gradle settings ([e96fdd4](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/e96fdd453d037b6cf50ca044d2585b2dfad65716))
 
 ## [1.1.2](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.1...v1.1.2) (2026-04-18)
+
+
+### Chores / Others
+
+* package-lock.json ([5b68579](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/5b68579d335ef785e2f61eaf7dd38b1aa789df27))
+* Update README.md ([83e6758](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/83e675807b77e289c94c55ce267da22899eeaa25))
 
 ## [1.1.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.1.0...v1.1.1) (2026-04-18)
 
