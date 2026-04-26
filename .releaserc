@@ -3,44 +3,34 @@
     "main",
     {
       "name": "dev",
-      "prerelease": "alpha"
+      "prerelease": true
     }
   ],
   "plugins": [
     [
-      "@semantic-release/commit-analyzer",
-      {
-        "preset": "angular",
+      "@semantic-release/commit-analyzer", {
         "releaseRules": [
-          { "type": "build", "release": "patch" },
-          { "type": "chore", "release": "patch" },
-          { "type": "fix", "release": "patch" },
-          { "type": "feat", "release": "minor" }
+          { "type": "build", "scope": "Needs bump", "release": "patch" }
         ]
       }
     ],
     "@semantic-release/release-notes-generator",
-
     [
-      "@MorpheApp/changelog",
-      {
+      "@MorpheApp/changelog", {
         "releaseJson": {
           "path": "patches-bundle.json",
           "downloadUrlTemplate": "https://github.com/${owner}/${repo}/releases/download/v${version}/patches-${version}.mpp",
-          "signatureUrlTemplate": "https://github.com/${owner}/${repo}/releases/download/v${version}/patches-${version}.mpp.asc"
+          "signatureUrlTemplate": ""
         }
       }
     ],
-
     "gradle-semantic-release-plugin",
-
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "jq --arg v \"${nextRelease.version}\" '.version=$v' patches-list.json > patches-list.tmp.json && mv patches-list.tmp.json patches-list.json"
+        "prepareCmd": "jq '.version=\"${nextRelease.version}\"' patches-list.json > patches-list.json.tmp && mv patches-list.json.tmp patches-list.json"
       }
     ],
-
     [
       "@semantic-release/git",
       {
@@ -50,29 +40,24 @@
           "patches-bundle.json",
           "patches-list.json"
         ],
-        "message": "chore(release): v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        "message": "chore: Release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
-
     [
       "@semantic-release/github",
       {
         "assets": [
           {
-            "path": "patches/build/libs/patches-*.mpp"
+            "path": "patches/build/libs/patches-!(*sources*|*javadoc*).mpp?(.asc)"
           }
         ],
-        "successComment": false,
-        "failComment": false
+        "successComment": false
       }
     ],
-
     [
-      "@saithodev/semantic-release-backmerge",
+      "@cleyrop-org/semantic-release-backmerge",
       {
-        "backmergeBranches": [
-          { "from": "main", "to": "dev" }
-        ],
+        "backmergeBranches": [{"from": "main", "to": "dev"}],
         "clearWorkspace": true
       }
     ]

@@ -31,11 +31,6 @@ jobs:
       - name: Cache Gradle
         uses: burrunan/gradle-cache-action@v3
 
-      - name: Build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew :patches:buildAndroid generatePatchesList clean
-
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
@@ -43,7 +38,9 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install semantic-release @cleyrop-org/semantic-release-backmerge gradle-semantic-release-plugin @MorpheApp/changelog @semantic-release/exec @semantic-release/git @semantic-release/github
 
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v6
@@ -53,14 +50,12 @@ jobs:
           fingerprint: ${{ vars.GPG_FINGERPRINT }}
 
       - name: Release
-        uses: cycjimmy/semantic-release-action@v5
-        id: release
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Attest
-        if: steps.release.outputs.new_release_published == 'true'
         uses: actions/attest-build-provenance@v3
         with:
-          subject-name: 'Morphe Patches ${{ steps.release.outputs.new_release_git_tag }}'
+          subject-name: 'Morphe Patches'
           subject-path: patches/build/libs/patches-*.mpp
