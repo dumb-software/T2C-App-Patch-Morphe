@@ -55,6 +55,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Attest
+        if: hashFiles('patches/build/libs/patches-*.mpp') != ''
         uses: actions/attest-build-provenance@v3
         with:
           subject-name: 'Morphe Patches'
