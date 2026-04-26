@@ -1,5 +1,5 @@
 {
-  "version": "1.2.3",
+  "version": "v1.2.3",
   "patches": [
     {
       "name": "Change API endpoint",
@@ -15,7 +15,7 @@
         {
           "key": "api_url",
           "title": "API URL",
-          "description": "Enter the base URL for the API (e.g., https://my-proxy.t2c.fr)",
+          "description": "Enter the base URL for the API (e.g., https://api.t2c.fr)",
           "required": false,
           "type": "kotlin.String",
           "default": "https://api.t2c.fr",
@@ -24,8 +24,51 @@
       ]
     },
     {
+      "name": "Custom Umami endpoint",
+      "description": "Points the app to a custom Umami analytics server.",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "fr.t2c.t2c": [
+          "3.2.0"
+        ]
+      },
+      "options": [
+        {
+          "key": "umami_endpoint",
+          "title": "Umami Endpoint",
+          "description": "Enter the base URL for Umami (e.g., https://analytics.t2c.fr/api/send)",
+          "required": false,
+          "type": "kotlin.String",
+          "default": "https://analytics.t2c.fr/api/send",
+          "values": null
+        },
+        {
+          "key": "umami_website",
+          "title": "Umami Website ID",
+          "description": "Enter your Umami Website ID",
+          "required": false,
+          "type": "kotlin.String",
+          "default": "",
+          "values": null
+        }
+      ]
+    },
+    {
       "name": "Force developer environment",
       "description": "Replaces the production environment variables with the developer and staging ones.",
+      "use": true,
+      "dependencies": [],
+      "compatiblePackages": {
+        "fr.t2c.t2c": [
+          "3.2.0"
+        ]
+      },
+      "options": []
+    },
+    {
+      "name": "Force local environment",
+      "description": "Replaces the production environment variables with the local ones.",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {

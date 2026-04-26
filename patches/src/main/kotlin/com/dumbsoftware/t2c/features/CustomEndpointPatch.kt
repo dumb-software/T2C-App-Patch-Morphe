@@ -14,7 +14,7 @@ val customEndpointPatch = rawResourcePatch(
     val customUrl by stringOption(
         key = "api_url",
         title = "API URL",
-        description = "Enter the base URL for the API (e.g., https://my-proxy.t2c.fr)",
+        description = "Enter the base URL for the API (e.g., https://api.t2c.fr)",
         default = "https://api.t2c.fr"
     )
 
