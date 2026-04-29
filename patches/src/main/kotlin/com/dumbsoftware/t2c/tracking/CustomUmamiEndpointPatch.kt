@@ -3,6 +3,7 @@ package com.dumbsoftware.t2c.tracking
 import app.morphe.patcher.patch.rawResourcePatch
 import app.morphe.patcher.patch.stringOption
 import com.dumbsoftware.t2c.COMPATIBILITY_T2C
+import com.dumbsoftware.t2c.util.updateEnvVariables
 
 @Suppress("unused")
 val customUmamiEndpointPatch = rawResourcePatch(
@@ -26,15 +27,12 @@ val customUmamiEndpointPatch = rawResourcePatch(
     )
 
     execute {
-        listOf(".env.prod", ".env.dev").forEach { fileName ->
-            val envFile = get("assets/flutter_assets/$fileName") ?: return@forEach
-            
-            val content = envFile.readText()
-            val patched = content
-                .replace(Regex("UMAMI_ENDPOINT=.*"), "UMAMI_ENDPOINT=${customEndpoint ?: ""}")
-                .replace(Regex("UMAMI_WEBSITE=.*"), "UMAMI_WEBSITE=${customWebsite ?: ""}")
-                
-            envFile.writeText(patched)
-        }
+        updateEnvVariables(
+            fileNames = listOf(".env.prod", ".env.dev"),
+            updates = mapOf(
+                "UMAMI_ENDPOINT" to (customEndpoint ?: ""),
+                "UMAMI_WEBSITE" to (customWebsite ?: "")
+            )
+        )
     }
 }

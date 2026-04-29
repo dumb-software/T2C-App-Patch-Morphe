@@ -13,10 +13,12 @@ val removeFirebasePatch = resourcePatch(
     execute {
         document("res/values/strings.xml").use { document ->
             val stringNodes = document.getElementsByTagName("string")
-            for (i in 0 until stringNodes.length) {
+            val targetKeys = setOf("google_app_id", "google_crash_reporting_api_key", "google_api_key")
+            
+            (0 until stringNodes.length).forEach { i ->
                 val node = stringNodes.item(i)
                 val nameAttr = node.attributes.getNamedItem("name")?.nodeValue
-                if (nameAttr == "google_app_id" || nameAttr == "google_crash_reporting_api_key" || nameAttr == "google_api_key") {
+                if (nameAttr in targetKeys) {
                     node.textContent = ""
                 }
             }
