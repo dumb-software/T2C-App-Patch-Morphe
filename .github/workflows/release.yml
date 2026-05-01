@@ -43,7 +43,7 @@ jobs:
           npm install semantic-release @cleyrop-org/semantic-release-backmerge gradle-semantic-release-plugin @MorpheApp/changelog @semantic-release/exec @semantic-release/git @semantic-release/github
 
       - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
+        uses: crazy-max/ghaction-import-gpg@v7
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
