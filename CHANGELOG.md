@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.3.0...v1.4.0) (2026-05-01)
+
+
+### Features
+
+* **patches:** improve XML parsing performance ([6ab4940](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/6ab494078978602ebebd02a05d53c50c942dc196))
+
 # [1.4.0-dev.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.3.0...v1.4.0-dev.1) (2026-04-29)
 
 

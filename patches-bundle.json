@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-04-29T15:57:42",
-  "description": "# [1.4.0-dev.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.3.0...v1.4.0-dev.1) (2026-04-29)\n\n\n### Features\n\n* **patches:** improve XML parsing performance ([6ab4940](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/6ab494078978602ebebd02a05d53c50c942dc196))",
-  "download_url": "https://github.com/dumb-software/T2C-App-Patch-Morphe/releases/download/v1.4.0-dev.1/patches-1.4.0-dev.1.mpp",
+  "created_at": "2026-05-01T12:38:59",
+  "description": "# [1.4.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.3.0...v1.4.0) (2026-05-01)\n\n\n### Features\n\n* **patches:** improve XML parsing performance ([6ab4940](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/6ab494078978602ebebd02a05d53c50c942dc196))",
+  "download_url": "https://github.com/dumb-software/T2C-App-Patch-Morphe/releases/download/v1.4.0/patches-1.4.0.mpp",
   "signature_download_url": "",
-  "version": "1.4.0-dev.1"
+  "version": "1.4.0"
 }
