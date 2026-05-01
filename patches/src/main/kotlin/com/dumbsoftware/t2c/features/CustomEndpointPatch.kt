@@ -3,6 +3,7 @@ package com.dumbsoftware.t2c.features
 import app.morphe.patcher.patch.rawResourcePatch
 import app.morphe.patcher.patch.stringOption
 import com.dumbsoftware.t2c.COMPATIBILITY_T2C
+import com.dumbsoftware.t2c.util.updateEnvVariables
 
 @Suppress("unused")
 val customEndpointPatch = rawResourcePatch(
@@ -19,11 +20,9 @@ val customEndpointPatch = rawResourcePatch(
     )
 
     execute {
-        val envFile = get("assets/flutter_assets/.env.prod") ?: return@execute
-        val content = envFile.readText()
-
-        val patched = content.replace("https://api.t2c.fr", customUrl ?: "https://api.t2c.fr")
-        
-        envFile.writeText(patched)
+        updateEnvVariables(
+            fileNames = listOf(".env.prod"),
+            updates = mapOf("API_URL" to (customUrl ?: "https://api.t2c.fr"))
+        )
     }
 }

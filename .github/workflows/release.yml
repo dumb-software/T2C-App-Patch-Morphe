@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup Java
         uses: actions/setup-java@v5
@@ -43,7 +43,7 @@ jobs:
           npm install semantic-release @cleyrop-org/semantic-release-backmerge gradle-semantic-release-plugin @MorpheApp/changelog @semantic-release/exec @semantic-release/git @semantic-release/github
 
       - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
+        uses: crazy-max/ghaction-import-gpg@v7
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
@@ -56,7 +56,7 @@ jobs:
 
       - name: Attest
         if: hashFiles('patches/build/libs/patches-*.mpp') != ''
-        uses: actions/attest-build-provenance@v3
+        uses: actions/attest-build-provenance@v4
         with:
           subject-name: 'Morphe Patches'
           subject-path: patches/build/libs/patches-*.mpp

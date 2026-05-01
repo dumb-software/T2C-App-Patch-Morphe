@@ -2,6 +2,7 @@ package com.dumbsoftware.t2c.tracking
 
 import app.morphe.patcher.patch.rawResourcePatch
 import com.dumbsoftware.t2c.COMPATIBILITY_T2C
+import com.dumbsoftware.t2c.util.updateEnvVariables
 
 @Suppress("unused")
 val removeUmamiPatch = rawResourcePatch(
@@ -11,16 +12,13 @@ val removeUmamiPatch = rawResourcePatch(
     compatibleWith(COMPATIBILITY_T2C)
 
     execute {
-        listOf(".env.prod", ".env.dev").forEach { fileName ->
-            val envFile = get("assets/flutter_assets/$fileName") ?: return@forEach
-            
-            val content = envFile.readText()
-            val patched = content
-                .replace(Regex("UMAMI_ENDPOINT=.*"), "UMAMI_ENDPOINT=http://127.0.0.1")
-                .replace(Regex("UMAMI_WEBSITE=.*"), "UMAMI_WEBSITE=")
-                .replace(Regex("UMAMI_HOSTNAME=.*"), "UMAMI_HOSTNAME=127.0.0.1")
-                
-            envFile.writeText(patched)
-        }
+        updateEnvVariables(
+            fileNames = listOf(".env.prod", ".env.dev"),
+            updates = mapOf(
+                "UMAMI_ENDPOINT" to "http://127.0.0.1",
+                "UMAMI_WEBSITE" to "",
+                "UMAMI_HOSTNAME" to "127.0.0.1"
+            )
+        )
     }
 }

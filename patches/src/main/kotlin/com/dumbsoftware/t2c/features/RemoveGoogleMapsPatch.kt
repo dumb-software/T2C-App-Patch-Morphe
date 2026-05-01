@@ -13,11 +13,11 @@ val removeGoogleMapsPatch = resourcePatch(
     execute {
         document("AndroidManifest.xml").use { document ->
             val metaDataNodes = document.getElementsByTagName("meta-data")
-            for (i in 0 until metaDataNodes.length) {
+            (0 until metaDataNodes.length).forEach { i ->
                 val node = metaDataNodes.item(i)
-                val nameAttr = node.attributes.getNamedItem("android:name")
-                if (nameAttr?.nodeValue == "com.google.android.geo.API_KEY") {
-                    node.attributes.getNamedItem("android:value")?.nodeValue = ""
+                val attributes = node.attributes
+                if (attributes.getNamedItem("android:name")?.nodeValue == "com.google.android.geo.API_KEY") {
+                    attributes.getNamedItem("android:value")?.let { it.nodeValue = "" }
                 }
             }
         }
