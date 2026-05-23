@@ -12,7 +12,7 @@ fun ResourcePatchContext.updateEnvVariables(
         var content = envFile.readText()
         
         updates.forEach { (key, value) ->
-            val regex = Regex("$key=.*")
+            val regex = Regex("^$key=.*", RegexOption.MULTILINE)
             content = if (content.contains(regex)) {
                 content.replace(regex, "$key=$value")
             } else {
