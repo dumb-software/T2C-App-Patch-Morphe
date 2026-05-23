@@ -1,3 +1,10 @@
+## [1.4.1-dev.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.4.0...v1.4.1-dev.1) (2026-05-23)
+
+
+### Bug Fixes
+
+* anchor regex in EnvUtils to prevent unintended replacements ([032ed7f](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/032ed7ffa7239f2ec3130de60c5f81b573e722e7))
+
 # [1.4.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.3.0...v1.4.0) (2026-05-01)
 
 
