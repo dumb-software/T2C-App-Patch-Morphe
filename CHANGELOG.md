@@ -1,3 +1,10 @@
+# [1.5.0-dev.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.4.1-dev.1...v1.5.0-dev.1) (2026-05-23)
+
+
+### Features
+
+* merge force dev and local environment patches into a single selectable option ([cc70408](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/cc70408b54b941beb8a4022dec265ca90dad384c))
+
 ## [1.4.1-dev.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.4.0...v1.4.1-dev.1) (2026-05-23)
 
 
