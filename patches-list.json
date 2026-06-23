@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0-dev.1",
   "patches": [
     {
       "name": "Change API endpoint",
@@ -55,8 +55,8 @@
       ]
     },
     {
-      "name": "Force developer environment",
-      "description": "Replaces the production environment variables with the developer and staging ones.",
+      "name": "Force environment",
+      "description": "Replaces the production environment variables with the developer or local ones.",
       "use": true,
       "dependencies": [],
       "compatiblePackages": {
@@ -64,19 +64,20 @@
           "3.2.0"
         ]
       },
-      "options": []
-    },
-    {
-      "name": "Force local environment",
-      "description": "Replaces the production environment variables with the local ones.",
-      "use": true,
-      "dependencies": [],
-      "compatiblePackages": {
-        "fr.t2c.t2c": [
-          "3.2.0"
-        ]
-      },
-      "options": []
+      "options": [
+        {
+          "key": "environment",
+          "title": "Environment",
+          "description": "Select the environment to force.",
+          "required": false,
+          "type": "kotlin.String",
+          "default": "dev",
+          "values": {
+            "Developer": "dev",
+            "Local": "local"
+          }
+        }
+      ]
     },
     {
       "name": "Remove Firebase tracking",
