@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.4.0...v1.5.0) (2026-06-23)
+
+
+### Bug Fixes
+
+* anchor regex in EnvUtils to prevent unintended replacements ([032ed7f](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/032ed7ffa7239f2ec3130de60c5f81b573e722e7))
+
+
+### Features
+
+* merge force dev and local environment patches into a single selectable option ([cc70408](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/cc70408b54b941beb8a4022dec265ca90dad384c))
+
 # [1.5.0-dev.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.4.1-dev.1...v1.5.0-dev.1) (2026-05-23)
 
 
