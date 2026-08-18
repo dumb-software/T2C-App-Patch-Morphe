@@ -1,3 +1,10 @@
+# [1.5.0-dev.2](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.5.0-dev.1...v1.5.0-dev.2) (2026-08-18)
+
+
+### Features
+
+* **patches:** add custom map styles, security bypass, and granular endpoints ([a4ecdeb](https://github.com/dumb-software/T2C-App-Patch-Morphe/commit/a4ecdeba6dcd82c58202fa76d1e861da1130ad7d))
+
 # [1.5.0-dev.1](https://github.com/dumb-software/T2C-App-Patch-Morphe/compare/v1.4.1-dev.1...v1.5.0-dev.1) (2026-05-23)
 
 
