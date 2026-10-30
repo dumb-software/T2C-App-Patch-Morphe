@@ -14,12 +14,18 @@ This project is built using [Morphe Patcher](https://github.com/MorpheApp/morphe
 
 | Patch | Type | Description | Configurable Options |
 | :--- | :---: | :--- | :--- |
+| **`Bypass maintenance and force update`** | `RawResource` | Disables maintenance lock and force-update screens by overriding the status endpoint. | *None* |
 | **`Change API endpoint`** | `RawResource` | Redirects all backend microservices (`URL_EDITORIAL`, `URL_SIV`, `URL_NOTIFICATIONS`, `URL_FAVORITES`, `URL_STATUS`) to a custom base URL. | `api_url` *(default: `https://api.t2c.fr`)* |
+| **`Custom Google Maps API key`** | `Resource` | Replaces the Google Maps API key in `AndroidManifest.xml` with a custom one. | `maps_api_key` *(default: `""`)* |
+| **`Custom map style`** | `RawResource` | Replaces Google Maps styling with Dark Mode, AMOLED, or Retro theme. | `map_theme` *(`dark`, `amoled`, or `retro`)* |
+| **`Custom microservices endpoints`** | `RawResource` | Points individual microservices (`/siv`, `/editorial`, `/notification`, `/favorite`, `/status`) to custom server URLs. | `siv_url`, `editorial_url`, `notifications_url`, `favorites_url`, `status_url` |
+| **`Custom Umami endpoint`** | `RawResource` | Points Umami analytics to a custom server instance. | `umami_endpoint`, `umami_website` |
+| **`Disable background location service`** | `Resource` | Disables persistent background location service (`GeolocatorLocationService`) and wake locks to save battery. | *None* |
+| **`Enable network interception`** | `Resource` | Enables cleartext HTTP traffic and user-installed certificate trust in `AndroidManifest.xml` for debugging (mitmproxy / Burp). | *None* |
 | **`Force environment`** | `RawResource` | Replaces the production environment variables with the developer (`staging.t2c.fr`) or local (`localhost`) ones. | `environment` *(`dev` or `local`)* |
 | **`Remove Firebase tracking`** | `Resource` | Disables Google Firebase tracking by wiping `google_app_id`, `google_crash_reporting_api_key`, and `google_api_key`. | *None* |
 | **`Remove Google Maps API key`** | `Resource` | Removes the Google Maps API key (`com.google.android.geo.API_KEY`) from `AndroidManifest.xml`. | *None* |
 | **`Remove Umami tracking`** | `RawResource` | Disables Umami telemetry safely by redirecting endpoints to loopback (`127.0.0.1`) and clearing website ID. | *None* |
-| **`Custom Umami endpoint`** | `RawResource` | Points Umami analytics to a custom server instance. | `umami_endpoint`, `umami_website` |
 
 ---
 
@@ -75,7 +81,8 @@ To update and generate the patches list ([`patches-list.json`](patches-list.json
 
 ## Related Resources
 
-- [T2C API Documentation](https://dumb-software.github.io/T2C-API-Documentation/)
+- [T2C API Documentation & Reverse-Engineering](https://dumb-software.github.io/T2C-API-Documentation/)
+- [Morphe Patcher Documentation](https://github.com/MorpheApp/morphe-patches)
 - [Contribution Guidelines](CONTRIBUTING.md)
 - [Changelog](CHANGELOG.md)
 
@@ -84,3 +91,4 @@ To update and generate the patches list ([`patches-list.json`](patches-list.json
 ## License
 
 T2C App Patches are licensed under the [MIT License](LICENSE).
+
